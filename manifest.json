@@ -1,0 +1,33 @@
+{
+  "name": "__MSG_appName__",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": []
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.derstandard.at/*"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ]
+    }
+  ],
+  "permissions": [],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png"
+    },
+    "default_title": "derStandard.at - no comment"
+  }
+}
